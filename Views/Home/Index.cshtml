@@ -1,0 +1,45 @@
+﻿@model IEnumerable<curdoperationsinmvc.EMPLOYE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">//it will itrate list of employ//
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmploySalary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployCity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmploySalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployCity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployId }) |///action links//
+            @Html.ActionLink("Details", "Details", new { id=item.EmployId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmployId })
+        </td>
+    </tr>
+}
+
+</table>
