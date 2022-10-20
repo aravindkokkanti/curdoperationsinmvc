@@ -9,10 +9,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">//it will itrate list of employ//
+<table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EmployName)
+            @Html.DisplayNameFor(model => model.EmployName)  @*it will itrate list of employ*@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EmploySalary)
@@ -35,7 +35,7 @@
             @Html.DisplayFor(modelItem => item.EmployCity)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployId }) |///action links//
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployId }) |@*///action links//*@
             @Html.ActionLink("Details", "Details", new { id=item.EmployId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EmployId })
         </td>

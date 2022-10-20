@@ -1,0 +1,42 @@
+﻿@model curdoperationsinmvc.EMPLOYE
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>EMPLOYE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmploySalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmploySalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployCity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
